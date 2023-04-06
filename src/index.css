@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   body {
     @apply bg-slate-950 text-slate-50;
   }
-} */
+
+  #root {
+    @apply w-full h-screen;
+  }
+}
 
 /* @layer components {
   .Custom-class {

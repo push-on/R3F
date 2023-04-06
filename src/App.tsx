@@ -1,7 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Physics, usePlane, useBox } from '@react-three/cannon'
-import { Stats, OrbitControls, } from '@react-three/drei'
+import { OrbitControls, } from '@react-three/drei'
 
 export const Cube = () => {
   return (
@@ -30,20 +27,15 @@ export const Plane = () => {
 
 export const App = () => {
   return (
-    <div className='w-full h-screen bg-slate-950 text-slate-50'>
-      <h1 className="text-5xl font-bold text-center fixed left-0 right-0">R3F</h1>
-      <Canvas shadows>
-        <ambientLight intensity={0.3} />
-        <spotLight position-y={3} castShadow />
-        <group>
-          <Cube />
-          <Sphere />
-        </group>
-        <Plane />
-        <OrbitControls />
-      </Canvas>
-    </div>
+    <>
+      <ambientLight intensity={0.3} />
+      <spotLight position-y={3} castShadow />
+      <group>
+        <Cube />
+        <Sphere />
+      </group>
+      <Plane />
+      <OrbitControls />
+    </>
   )
 }
-
-

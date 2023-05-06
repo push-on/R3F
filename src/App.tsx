@@ -27,6 +27,7 @@ export function TextObject() {
     </Text>
   )
 }
+
 export function Objects() {
   const sphere = useRef<Mesh>(null!)
   const cube = useRef<Mesh>(null!)
